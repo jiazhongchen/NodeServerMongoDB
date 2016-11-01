@@ -15,10 +15,8 @@ module.exports = function(app) {
   });
 
   app.get('/api/todos/today/', function(req, res) {        
-    var today = moment().startOf('day');//.format('YYMMDD hh:mmss');
-    var tomorrow = moment(today).add(1, 'days')//;.format('YYMMDD hh:mm:ss');
-    //console.log(today);
-    //console.log(tomorrow);
+    var today = moment().startOf('day');
+    var tomorrow = moment(today).add(1, 'days');
     Todos.find({ 
       timestamp: {
         $gte: today.format('YYMMDD hh:mm:ss'),
