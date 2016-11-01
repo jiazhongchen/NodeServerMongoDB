@@ -13,7 +13,7 @@ module.exports = function(app) {
         });        
     });
     
-    app.get('/api/todos/:timestamp', function(req, res) {        
+    app.get('/api/todo/:timestamp', function(req, res) {        
         Todos.find({ timestamp: req.params.timestamp }, function(err, todos) {
             if (err) throw err;            
             res.send(todos);
@@ -26,13 +26,10 @@ module.exports = function(app) {
            res.send(todo);
        });        
     });
-    
+
     app.post('/api/todo', function(req, res) {        
         if (req.body._id) {
             Todos.findByIdAndUpdate(req.body._id, { 
-                //todo: req.body.todo, 
-                //isDone: req.body.isDone, 
-                //hasAttachment: req.body.hasAttachment
                 timestamp   : req.body.timestamp,
                 obj_temp    : req.body.obj_temp,
                 ambient_temp: req.body.ambient_temp,
