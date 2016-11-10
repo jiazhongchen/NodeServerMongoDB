@@ -1,15 +1,22 @@
 var mongoose = require('mongoose');
 
-var Schema = mongoose.Schema;
+//var Schema = mongoose.Schema;
 
-var todoSchema = new Schema({
+var todoSchema = new mongoose.Schema({
 
     timestamp: String,
-    obj_temp: String,
-    ambient_temp: String,
-    air_pressure: String,
-    light: String,
-    humidity: String,
+    ambient_temp_A:  String,
+    ambient_temp_B:  String,
+    ambient_temp_C:  String,
+    ambient_temp_D:  String,
+    infrared_temp_A: String,
+    infrared_temp_B: String,
+    infrared_temp_C: String,
+    infrared_temp_D: String,
+    thermocouple_A:  String,
+    thermocouple_B:  String,
+    thermocouple_C:  String,
+    thermocouple_D:  String,
     acc_x: String,
     acc_y: String,
     acc_z: String,
