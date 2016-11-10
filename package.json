@@ -15,6 +15,7 @@
     "mongoose": "^4.4.7"
   },
   "devDependencies": {
+    "json2csv": "^3.7.1",
     "moment": "^2.15.2"
   }
 }
