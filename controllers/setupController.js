@@ -5,7 +5,9 @@ module.exports = function(app) {
     app.get('/api/setupTodos', function(req, res) {
         // seed database
         var starterTodos = [{
-            timestamp       : "161110 00:00:00",
+            timestamp       : "161126 00:00:00",
+            mac_address     : "1234567890AB",
+            event_code      : "15",
             ambient_temp_A  : "10.00",
             ambient_temp_B  : "11.00",
             ambient_temp_C  : "12.00",

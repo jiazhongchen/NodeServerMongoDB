@@ -4,7 +4,9 @@ var mongoose = require('mongoose');
 
 var todoSchema = new mongoose.Schema({
 
-    timestamp: String,
+    timestamp       : String,
+    mac_address     : String,
+    event_code      : String,
     ambient_temp_A  : String,
     ambient_temp_B  : String,
     ambient_temp_C  : String,
